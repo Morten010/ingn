@@ -1,4 +1,4 @@
-import { useMutation } from "@apollo/client"
+import { useMutation, useQuery } from "@apollo/client"
 import { insertBulkPosts } from "../gql/mutations"
 import { useReducer, useState } from "react"
 
@@ -36,6 +36,7 @@ export default function CreatePage() {
     })
 
     const {data, error, loading} = useQuery(getNav)
+
 
     console.log(data);
     console.log(error);
