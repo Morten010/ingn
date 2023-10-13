@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* font-family: 'Righteous', cursive;
+font-family: 'Roboto', sans-serif; */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: hsl(0, 14%, 90%);
+}w
+
+.screen-container{
+  @apply p-3 max-w-screen-lg mx-auto
+}
+
+.news-grid{
+  grid-auto-rows: minmax(auto, 300px);
+  display: grid;
+  gap: 0.75rem;
+  grid-template-areas: 
+    "a a"
+    "a a"
+    "b c"
+    "b d"
+    "e d"
+    "f f"
+    "g g"
+    "h i"; ;
+}
+
+@media (max-width: 640px) {
+    .news-grid{
+      display: flex;
+      flex-direction: column;
+    }
+}
