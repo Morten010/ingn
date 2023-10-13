@@ -35,7 +35,7 @@ export default function CreatePage() {
 
     })
 
-    const {data, error, loading} = useQuery(getNav)
+    const {data: categories, error: categoriesError, loading: loadingError} = useQuery(getNav)
 
 
     console.log(data);
